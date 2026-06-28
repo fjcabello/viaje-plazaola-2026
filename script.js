@@ -4,13 +4,20 @@
 
 /* ── Cuenta atrás hasta el 25 de julio de 2026, 16:00h ── */
 function updateCountdown() {
-  const target = new Date('2026-07-25T16:00:00');
+  const start  = new Date('2026-07-25T16:00:00');
+  const end    = new Date('2026-08-01T16:00:00');
   const now    = new Date();
-  const diff   = target - now;
+  const diff   = start - now;
+
+  if (now >= end) {
+    document.getElementById('countdown').innerHTML =
+      '<div class="countdown-box"><span class="countdown-num">🏖️</span><span class="countdown-label">¡Ya llegamos!</span></div>';
+    return;
+  }
 
   if (diff <= 0) {
     document.getElementById('countdown').innerHTML =
-      '<div class="countdown-box"><span class="countdown-num">🚴</span><span class="countdown-label">¡En marcha!</span></div>';
+      '<div class="countdown-box"><span class="countdown-num">🚴</span><span class="countdown-label">¡Estamos pedaleando!</span></div>';
     return;
   }
 
