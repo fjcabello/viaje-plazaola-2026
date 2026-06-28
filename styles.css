@@ -537,6 +537,18 @@ section {
   margin-bottom: 0.7rem;
 }
 
+.viajero-avatar-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  margin: 0 auto 0.8rem;
+  border: 3px solid var(--verde-claro);
+  box-shadow: 0 4px 16px var(--sombra);
+}
+
 .viajero-card h3 {
   font-size: 1.3rem;
   color: var(--verde-oscuro);
