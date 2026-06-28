@@ -696,6 +696,22 @@ details.roadbook tr.key td {
   font-weight: 700;
 }
 
+details.roadbook ul.qv-list {
+  margin-top: 0.8rem;
+  padding-left: 1.2rem;
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+details.roadbook ul.qv-list li {
+  margin-bottom: 0.45rem;
+}
+
+details.roadbook ul.qv-list li strong {
+  color: var(--texto);
+}
+
 /* ─── Animaciones de entrada ─────────────────────────── */
 .fade-in {
   opacity: 0;
