@@ -712,6 +712,113 @@ details.roadbook ul.qv-list li strong {
   color: var(--texto);
 }
 
+/* ─── SECCIÓN: Restaurantes recomendados ────────────────── */
+.rest-aviso {
+  background: #fff3cd;
+  border-left: 4px solid #ff9800;
+  border-radius: 0 8px 8px 0;
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+  color: #7a4800;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.rest-bloque {
+  margin-bottom: 3rem;
+}
+
+.rest-ciudad-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid var(--verde-menta);
+  padding-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.rest-ciudad-nombre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+.rest-ciudad-sub {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.rest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.rest-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px var(--sombra);
+  padding: 1.2rem 1.4rem;
+  transition: transform 0.2s;
+}
+
+.rest-card:hover { transform: translateY(-2px); }
+
+.rest-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.rest-nombre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+.rest-tag {
+  border-radius: 50px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.rest-tag.tag-principal   { background: var(--verde-menta); color: var(--verde-oscuro); }
+.rest-tag.tag-alternativa { background: #dbeafe; color: #1e40af; }
+.rest-tag.tag-informal    { background: var(--beige-oscuro); color: var(--texto-suave); }
+.rest-tag.tag-pintxos     { background: #ede9fe; color: #5b21b6; }
+.rest-tag.tag-menu        { background: #ffe0b2; color: #bf360c; }
+.rest-tag.tag-planb       { background: #f1f5f9; color: #64748b; }
+
+.rest-desc {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+.rest-subruta {
+  margin-bottom: 1.5rem;
+}
+
+.rest-subruta-titulo {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--verde-medio);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
 /* ─── Animaciones de entrada ─────────────────────────── */
 .fade-in {
   opacity: 0;
