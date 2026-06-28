@@ -1,0 +1,587 @@
+/* ============================================================
+   Pedaleando voy, pedaleando vengo — Viaje julio 2026
+   ============================================================ */
+
+:root {
+  --verde-oscuro:  #1a472a;
+  --verde-medio:   #2d6a4f;
+  --verde-claro:   #52b788;
+  --verde-menta:   #b7e4c7;
+  --beige:         #f5f0e8;
+  --beige-oscuro:  #e8e0d0;
+  --texto:         #1a1a2e;
+  --texto-suave:   #4a4a5a;
+  --blanco:        #ffffff;
+  --sombra:        rgba(26,71,42,0.15);
+}
+
+/* ─── Reset ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--beige);
+  color: var(--texto);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* ─── Tipografía ─────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.script { font-family: 'Dancing Script', cursive; }
+
+/* ─── Barra de navegación ────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: rgba(26,71,42,0.92);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s;
+}
+
+nav a {
+  color: var(--verde-menta);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--blanco); }
+
+/* ─── HERO ───────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 3rem;
+  background:
+    linear-gradient(160deg, rgba(26,71,42,0.85) 0%, rgba(45,106,79,0.75) 60%, rgba(82,183,136,0.5) 100%),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Via_Verde_del_Plazaola_04.jpg/1280px-Via_Verde_del_Plazaola_04.jpg')
+    center/cover no-repeat;
+  color: var(--blanco);
+  position: relative;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, var(--beige));
+}
+
+.hero-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  animation: bob 2.5s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+#hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+/* Cuenta atrás */
+#countdown {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.countdown-box {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1rem 1.4rem;
+  min-width: 80px;
+}
+
+.countdown-num {
+  display: block;
+  font-size: 2.4rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.countdown-label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-top: 0.3rem;
+}
+
+.viajeros-chips {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chip {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 50px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+}
+
+/* ─── Secciones comunes ──────────────────────────────── */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--verde-medio);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--verde-oscuro);
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--verde-claro);
+  border-radius: 4px;
+  margin-bottom: 2.5rem;
+}
+
+/* ─── SECCIÓN: La ruta ───────────────────────────────── */
+#ruta {
+  background: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px var(--sombra);
+  padding: 4rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+#ruta .ruta-texto { }
+
+.ruta-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-card {
+  background: var(--beige);
+  border-radius: 14px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.stat-num {
+  display: block;
+  font-size: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: var(--verde-medio);
+}
+
+.stat-lbl {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+/* ─── SECCIÓN: Mapa ──────────────────────────────────── */
+#mapa-wrap {
+  background: var(--blanco);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px var(--sombra);
+}
+
+#mapa-wrap iframe {
+  border-radius: 12px;
+  display: block;
+  width: 100%;
+  height: 520px;
+  border: none;
+}
+
+.wikiloc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  color: var(--verde-medio);
+  font-size: 0.88rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.wikiloc-link:hover { color: var(--verde-oscuro); text-decoration: underline; }
+
+/* ─── SECCIÓN: Etapas ────────────────────────────────── */
+#etapas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.etapa-card {
+  background: var(--blanco);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px var(--sombra);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.etapa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--sombra);
+}
+
+.etapa-header {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.etapa-num {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
+
+.etapa-fecha {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.etapa-body {
+  padding: 1.4rem 1.5rem;
+}
+
+.etapa-ruta {
+  font-size: 1.15rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--verde-oscuro);
+  margin-bottom: 1rem;
+}
+
+.etapa-stats {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  background: var(--beige);
+  border-radius: 50px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+
+.badge.verde { background: var(--verde-menta); color: var(--verde-oscuro); }
+.badge.naranja { background: #ffe0b2; color: #bf360c; }
+
+.etapa-aloj {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  border-top: 1px solid var(--beige-oscuro);
+  padding-top: 0.8rem;
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.aviso {
+  background: #fff3cd;
+  border-left: 4px solid #ff9800;
+  border-radius: 0 8px 8px 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.82rem;
+  color: #7a4800;
+  margin-top: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ─── SECCIÓN: Alojamientos ──────────────────────────── */
+#aloj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.aloj-card {
+  background: var(--blanco);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px var(--sombra);
+  padding: 1.4rem 1.6rem;
+}
+
+.aloj-night {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--verde-claro);
+  font-weight: 700;
+}
+
+.aloj-name {
+  font-size: 1.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+  margin: 0.3rem 0;
+}
+
+.aloj-lugar {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 0.8rem;
+}
+
+.aloj-desayuno {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.aloj-desayuno.incl  { background: #e8f5e9; color: #2e7d32; }
+.aloj-desayuno.cerca { background: #e3f2fd; color: #1565c0; }
+.aloj-desayuno.reservar { background: #fff3e0; color: #e65100; }
+.aloj-desayuno.libre { background: var(--beige-oscuro); color: var(--texto-suave); }
+
+/* ─── SECCIÓN: Transporte ────────────────────────────── */
+#transporte {
+  background: var(--verde-oscuro);
+  color: var(--blanco);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px var(--sombra);
+  padding: 4rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#transporte .section-title { color: var(--verde-menta); }
+#transporte .section-label { color: var(--verde-claro); }
+#transporte .section-divider { background: var(--verde-claro); }
+
+.transport-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.transport-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.transport-card h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: var(--verde-menta);
+  margin-bottom: 0.5rem;
+}
+
+.transport-card p { font-size: 0.92rem; opacity: 0.85; line-height: 1.7; }
+
+.transport-card .detail {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--blanco);
+  margin-top: 0.5rem;
+}
+
+.descuento-badge {
+  display: inline-block;
+  background: var(--verde-claro);
+  color: var(--verde-oscuro);
+  border-radius: 50px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+}
+
+/* ─── SECCIÓN: Material ──────────────────────────────── */
+#material-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.material-item {
+  background: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 3px 16px var(--sombra);
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.material-item:hover { transform: translateY(-2px); }
+
+.material-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+.material-item span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+/* ─── SECCIÓN: Viajeros ──────────────────────────────── */
+#viajeros-grid {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.viajero-card {
+  background: var(--blanco);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px var(--sombra);
+  padding: 2rem 1.8rem;
+  text-align: center;
+  width: 180px;
+  transition: transform 0.25s;
+}
+
+.viajero-card:hover { transform: translateY(-4px); }
+
+.viajero-avatar {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.viajero-card h3 {
+  font-size: 1.3rem;
+  color: var(--verde-oscuro);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ─── Footer ─────────────────────────────────────────── */
+footer {
+  background: var(--verde-oscuro);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+footer span { color: var(--verde-claro); }
+
+/* ─── Animaciones de entrada ─────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { gap: 1rem; font-size: 0.72rem; flex-wrap: wrap; }
+
+  #ruta {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.5rem;
+  }
+
+  #mapa-wrap { padding: 2rem 1rem; }
+  #mapa-wrap iframe { height: 380px; }
+
+  .transport-grid { grid-template-columns: 1fr; }
+
+  #transporte { padding: 3rem 1.5rem; }
+
+  section { padding: 3.5rem 1rem; }
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedaleando voy, pedaleando vengo · Julio 2026</title>
+  <meta name="description" content="Vía Verde del Plazaola · Vitoria-Gasteiz → San Sebastián · Julio 2026" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  NAV                                                   -->
+<!-- ══════════════════════════════════════════════════════ -->
+<nav>
+  <a href="#hero">Inicio</a>
+  <a href="#seccion-ruta">La ruta</a>
+  <a href="#seccion-mapa">Mapa</a>
+  <a href="#seccion-etapas">Etapas</a>
+  <a href="#seccion-aloj">Alojamientos</a>
+  <a href="#seccion-transporte">Transporte</a>
+  <a href="#seccion-material">Equipaje</a>
+  <a href="#seccion-viajeros">El equipo</a>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  HERO                                                  -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-icon">🚵</div>
+
+  <h1>Pedaleando voy,<br>pedaleando vengo</h1>
+
+  <p class="hero-sub">Vía Verde del Plazaola · Julio 2026</p>
+
+  <!-- Cuenta atrás -->
+  <div id="countdown">
+    <div class="countdown-box">
+      <span class="countdown-num" id="cd-days">--</span>
+      <span class="countdown-label">Días</span>
+    </div>
+    <div class="countdown-box">
+      <span class="countdown-num" id="cd-hours">--</span>
+      <span class="countdown-label">Horas</span>
+    </div>
+    <div class="countdown-box">
+      <span class="countdown-num" id="cd-minutes">--</span>
+      <span class="countdown-label">Minutos</span>
+    </div>
+    <div class="countdown-box">
+      <span class="countdown-num" id="cd-seconds">--</span>
+      <span class="countdown-label">Segundos</span>
+    </div>
+  </div>
+
+  <!-- Viajeros -->
+  <div class="viajeros-chips">
+    <span class="chip">👧 Rocío</span>
+    <span class="chip">👩 Christine</span>
+    <span class="chip">👨 Paco</span>
+    <span class="chip">👩 Mery</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  LA RUTA                                               -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div style="padding: 4rem 1.5rem;">
+  <div id="ruta" class="fade-in">
+    <div class="ruta-texto">
+      <p class="section-label">El camino</p>
+      <h2 class="section-title" id="seccion-ruta">La ruta</h2>
+      <div class="section-divider"></div>
+      <p style="color: var(--texto-suave); margin-bottom: 1.2rem;">
+        La <strong>Vía Verde del Plazaola</strong> recorre el trazado del antiguo ferrocarril minero que unía Pamplona con San Sebastián, atravesando el Parque Natural de Aralar, el valle del Leizarán y frondosos bosques vascos.
+      </p>
+      <p style="color: var(--texto-suave);">
+        Una ruta de <strong>158 km</strong> en 5 etapas por el País Vasco y Navarra, desde la llanada alavesa hasta la costa cantábrica. Poca pendiente, mucho verde y final con vistas al mar.
+      </p>
+    </div>
+
+    <div class="ruta-stats">
+      <div class="stat-card">
+        <span class="stat-num">158</span>
+        <span class="stat-lbl">km totales</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">5</span>
+        <span class="stat-lbl">etapas</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">↑ 486</span>
+        <span class="stat-lbl">m subida</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">↓ 1.021</span>
+        <span class="stat-lbl">m bajada</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  MAPA WIKILOC                                         -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div style="padding: 0 1.5rem 4rem;">
+  <div id="mapa-wrap" class="fade-in">
+    <p class="section-label">GPS · 31 waypoints</p>
+    <h2 class="section-title" id="seccion-mapa">El mapa</h2>
+    <div class="section-divider"></div>
+
+    <iframe
+      src="https://es.wikiloc.com/wikiloc/spatialArtifacts.do?event=setCurrentArtifact&id=271570751&measures=metric"
+      scrolling="no"
+      title="Vía Verde del Plazaola · Wikiloc">
+    </iframe>
+
+    <a class="wikiloc-link"
+       href="https://es.wikiloc.com/rutas-ciclismo-de-turismo/via-verde-del-plazaola-vitoria-gasteiz-san-sebastian-158-km-5-etapas-271570751"
+       target="_blank" rel="noopener">
+      🗺️ Ver en Wikiloc (ruta completa con waypoints) →
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  ETAPAS                                                -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section id="seccion-etapas">
+  <p class="section-label">Día a día</p>
+  <h2 class="section-title">Las etapas</h2>
+  <div class="section-divider"></div>
+
+  <div id="etapas-grid">
+
+    <!-- ETAPA 1 -->
+    <div class="etapa-card fade-in">
+      <div class="etapa-header">
+        <span class="etapa-num">Etapa 1</span>
+        <span class="etapa-fecha">Dom 26 julio</span>
+      </div>
+      <div class="etapa-body">
+        <p class="etapa-ruta">Vitoria-Gasteiz → Salvatierra</p>
+        <div class="etapa-stats">
+          <span class="badge verde">🚴 28 km</span>
+          <span class="badge">↑ 153 m</span>
+          <span class="badge">↓ 77 m</span>
+          <span class="badge">⏱ ~2h 47min</span>
+        </div>
+        <p style="font-size:0.88rem; color:var(--texto-suave);">
+          Etapa de inauguración por la llanada alavesa. Salida tranquila desde Vitoria hasta la medieval Salvatierra.
+        </p>
+        <div class="etapa-aloj">🏠 El Gordo (Salvatierra)</div>
+      </div>
+    </div>
+
+    <!-- ETAPA 2 -->
+    <div class="etapa-card fade-in">
+      <div class="etapa-header">
+        <span class="etapa-num">Etapa 2</span>
+        <span class="etapa-fecha">Lun 27 julio</span>
+      </div>
+      <div class="etapa-body">
+        <p class="etapa-ruta">Salvatierra → Etxarri-Aranatz</p>
+        <div class="etapa-stats">
+          <span class="badge verde">🚴 34 km</span>
+          <span class="badge">↑ 47 m</span>
+          <span class="badge">↓ 149 m</span>
+          <span class="badge">⏱ ~3h 01min</span>
+        </div>
+        <p style="font-size:0.88rem; color:var(--texto-suave);">
+          La etapa más larga en distancia. Descenso suave hacia Navarra atravesando pequeños pueblos.
+        </p>
+        <div class="etapa-aloj">🏨 Hotel Aritzalko (Etxarri-Aranatz)</div>
+      </div>
+    </div>
+
+    <!-- ETAPA 3 -->
+    <div class="etapa-card fade-in">
+      <div class="etapa-header">
+        <span class="etapa-num">Etapa 3</span>
+        <span class="etapa-fecha">Mar 28 julio</span>
+      </div>
+      <div class="etapa-body">
+        <p class="etapa-ruta">Etxarri-Aranatz → Irurzun</p>
+        <div class="etapa-stats">
+          <span class="badge verde">🚴 25 km</span>
+          <span class="badge">↑ 27 m</span>
+          <span class="badge">↓ 83 m</span>
+          <span class="badge">⏱ ~2h 13min</span>
+        </div>
+        <p style="font-size:0.88rem; color:var(--texto-suave);">
+          La etapa más corta. Día tranquilo para visitar el parque natural de Aralar y disfrutar sin prisas.
+        </p>
+        <div class="etapa-aloj">🏨 Hotel Plazaola ★★★ (Irurzun)</div>
+      </div>
+    </div>
+
+    <!-- ETAPA 4 -->
+    <div class="etapa-card fade-in">
+      <div class="etapa-header">
+        <span class="etapa-num">Etapa 4</span>
+        <span class="etapa-fecha">Mié 29 julio</span>
+      </div>
+      <div class="etapa-body">
+        <p class="etapa-ruta">Irurzun → Leitza</p>
+        <div class="etapa-stats">
+          <span class="badge verde">🚴 30 km</span>
+          <span class="badge">↑ 217 m</span>
+          <span class="badge">↓ 179 m</span>
+          <span class="badge naranja">⏱ ~3h 04min</span>
+        </div>
+        <p style="font-size:0.88rem; color:var(--texto-suave);">
+          La etapa más dura en desnivel. Bosques de hayas y el impresionante túnel de Huici (linterna obligatoria).
+        </p>
+        <div class="aviso">⚠️ Túnel de Huici (1,8 km) — llevar linterna</div>
+        <div class="etapa-aloj">🏠 Leitzarooms (Leitza)</div>
+      </div>
+    </div>
+
+    <!-- ETAPA 5 -->
+    <div class="etapa-card fade-in" style="grid-column: span 1;">
+      <div class="etapa-header" style="background: var(--verde-medio);">
+        <span class="etapa-num">Etapa 5 · Final</span>
+        <span class="etapa-fecha">Jue 30 julio</span>
+      </div>
+      <div class="etapa-body">
+        <p class="etapa-ruta">Leitza → San Sebastián 🏖️</p>
+        <div class="etapa-stats">
+          <span class="badge verde">🚴 42 km</span>
+          <span class="badge">↑ 42 m</span>
+          <span class="badge">↓ 533 m</span>
+          <span class="badge verde">⏱ ~3h 43min</span>
+        </div>
+        <p style="font-size:0.88rem; color:var(--texto-suave);">
+          El gran descenso final. Desde los hayedos de Leitza hasta el Cantábrico, pasando por el valle del Leizarán. ¡Pintxos y txakoli en la meta!
+        </p>
+        <div class="etapa-aloj">🏡 Ametzagana (San Sebastián)</div>
+      </div>
+    </div>
+
+  </div><!-- /etapas-grid -->
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  ALOJAMIENTOS                                          -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section id="seccion-aloj">
+  <p class="section-label">Dónde dormimos</p>
+  <h2 class="section-title">Alojamientos</h2>
+  <div class="section-divider"></div>
+
+  <div id="aloj-grid">
+
+    <!-- Noche 0 (viernes) -->
+    <div class="aloj-card fade-in">
+      <span class="aloj-night">Noche 0 · Vie 25 jul — solo Rocío y Christine</span>
+      <p class="aloj-name">Hostal La Bilbaina</p>
+      <p class="aloj-lugar">📍 Vitoria-Gasteiz</p>
+      <span class="aloj-desayuno libre">☕ Desayuno libre (cafetería cercana)</span>
+    </div>
+
+    <!-- Noche 1 -->
+    <div class="aloj-card fade-in">
+      <span class="aloj-night">Noche 1 · Dom 26 jul</span>
+      <p class="aloj-name">El Gordo</p>
+      <p class="aloj-lugar">📍 Salvatierra / Agurain</p>
+      <span class="aloj-desayuno libre">☕ Desayuno libre (bares en el pueblo)</span>
+    </div>
+
+    <!-- Noche 2 -->
+    <div class="aloj-card fade-in">
+      <span class="aloj-night">Noche 2 · Lun 27 jul</span>
+      <p class="aloj-name">Hotel Aritzalko</p>
+      <p class="aloj-lugar">📍 Etxarri-Aranatz · Navarra</p>
+      <span class="aloj-desayuno incl">✅ Desayuno incluido</span>
+    </div>
+
+    <!-- Noche 3 -->
+    <div class="aloj-card fade-in">
+      <span class="aloj-night">Noche 3 · Mar 28 jul</span>
+      <p class="aloj-name">Hotel Plazaola ★★★</p>
+      <p class="aloj-lugar">📍 Irurzun · Navarra</p>
+      <span class="aloj-desayuno incl">✅ Desayuno incluido (A/D)</span>
+    </div>
+
+    <!-- Noche 4 -->
+    <div class="aloj-card fade-in">
+      <span class="aloj-night">Noche 4 · Mié 29 jul</span>
+      <p class="aloj-name">Leitzarooms</p>
+      <p class="aloj-lugar">📍 Leitza · Navarra</p>
+      <span class="aloj-desayuno reservar">⚠️ Desayuno: preguntar al reservar</span>
+    </div>
+
+    <!-- Noche 5 -->
+    <div class="aloj-card fade-in">
+      <span class="aloj-night">Noche 5 · Jue 30 jul</span>
+      <p class="aloj-name">Ametzagana</p>
+      <p class="aloj-lugar">📍 San Sebastián · Gipuzkoa</p>
+      <span class="aloj-desayuno reservar">📞 Desayuno: reservar con antelación</span>
+    </div>
+
+    <!-- Extra San Sebastián -->
+    <div class="aloj-card fade-in">
+      <span class="aloj-night">Noche 6 · Vie 31 jul</span>
+      <p class="aloj-name">Ametzagana</p>
+      <p class="aloj-lugar">📍 San Sebastián · día libre en la ciudad</p>
+      <span class="aloj-desayuno reservar">📞 Desayuno: reservar con antelación</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  TRANSPORTE                                            -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div style="padding: 0 1.5rem 4rem;">
+  <div id="transporte" class="fade-in">
+    <p class="section-label">Madrid ↔ Euskadi</p>
+    <h2 class="section-title" id="seccion-transporte">Transporte</h2>
+    <div class="section-divider"></div>
+
+    <div class="transport-grid">
+      <div class="transport-card">
+        <h4>🚌 Ida · Madrid → Vitoria</h4>
+        <p>Autobús ALSA</p>
+        <p class="detail">Sáb 25 jul · 16:00 h</p>
+        <p style="margin-top:0.4rem; font-size:0.85rem;">Estación Sur de Madrid → Vitoria-Gasteiz</p>
+        <span class="descuento-badge">15% dcto. — reservado por Paco</span>
+      </div>
+
+      <div class="transport-card">
+        <h4>🚌 Vuelta · San Sebastián → Madrid</h4>
+        <p>Autobús ALSA</p>
+        <p class="detail">Sáb 1 ago · 16:00 h</p>
+        <p style="margin-top:0.4rem; font-size:0.85rem;">San Sebastián → Estación Sur de Madrid</p>
+        <span class="descuento-badge">15% dcto. — reservado por Paco</span>
+      </div>
+    </div>
+
+    <p style="margin-top:1.5rem; font-size:0.85rem; opacity:0.7; text-align:center;">
+      🚲 Las bicis van en el autobús (equipaje). Confirmar espacio con ALSA al reservar.
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  MATERIAL / EQUIPAJE                                   -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section id="seccion-material">
+  <p class="section-label">No te olvides de...</p>
+  <h2 class="section-title">Equipaje esencial</h2>
+  <div class="section-divider"></div>
+
+  <div id="material-list">
+    <div class="material-item fade-in">
+      <span class="material-icon">⛑️</span>
+      <span>Casco (obligatorio)</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">🔦</span>
+      <span>Linterna frontal (túnel Huici)</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">🌧️</span>
+      <span>Chubasquero</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">🔋</span>
+      <span>Cámara de repuesto + parches</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">🔒</span>
+      <span>Candado para la bici</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">👜</span>
+      <span>Alforjas o mochila</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">🧴</span>
+      <span>Protector solar</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">💊</span>
+      <span>Botiquín básico</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">💳</span>
+      <span>Tarjeta/efectivo</span>
+    </div>
+    <div class="material-item fade-in">
+      <span class="material-icon">📱</span>
+      <span>Wikiloc descargado offline</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  EL EQUIPO                                             -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section id="seccion-viajeros" style="text-align:center;">
+  <p class="section-label">Los protagonistas</p>
+  <h2 class="section-title">El equipo ciclista</h2>
+  <div class="section-divider" style="margin: 0 auto 2.5rem;"></div>
+
+  <div id="viajeros-grid">
+    <div class="viajero-card fade-in">
+      <span class="viajero-avatar">👧</span>
+      <h3>Rocío</h3>
+    </div>
+    <div class="viajero-card fade-in">
+      <span class="viajero-avatar">👩</span>
+      <h3>Christine</h3>
+    </div>
+    <div class="viajero-card fade-in">
+      <span class="viajero-avatar">👨</span>
+      <h3>Paco</h3>
+    </div>
+    <div class="viajero-card fade-in">
+      <span class="viajero-avatar">👩</span>
+      <h3>Mery</h3>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                -->
+<!-- ══════════════════════════════════════════════════════ -->
+<footer>
+  <p>🚴 <span>Pedaleando voy, pedaleando vengo</span> · Vía Verde del Plazaola · Julio 2026</p>
+  <p style="margin-top:0.4rem;">Ruta en <a href="https://es.wikiloc.com/rutas-ciclismo-de-turismo/via-verde-del-plazaola-vitoria-gasteiz-san-sebastian-158-km-5-etapas-271570751" target="_blank" rel="noopener" style="color:var(--verde-claro);">Wikiloc</a> · fjcabello</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
